@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indira IVF | Survey</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-94XEVCB860"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-94XEVCB860');
+</script>
+
+
+<body>
+    <div class="navbar">
+
+        <img src="./Images/indraivf-logo.png" alt="">
+    </div>
+    <section class=" place-center column language-selection">
+        <h1>Choose Your Language</h1>
+        <div class="option-container">
+
+            <button value="hindi" class=" btn language-option">
+                Hindi
+            </button>
+            <button value="english" class=" btn language-option">
+                English
+            </button>
+        </div>
+    </section>
+    <section class="place-center column name-section" style="display: none;">
+        <h1>What's your name?</h1>
+        <input class="name-input" type="text">
+        <button class="btn btn-name">Next</button>
+    </section>
+    <section class="place-center welcome-section" style="display: none;">
+       <h1>Hey Palak</h1>
+    </section>
+    <section class="place-center column period-if-section" style="display: none;">
+        <img class="mensturation-img" src="./Images/menstruation 1.png" alt="">
+       <h1>We got to know that you are suffering from irregular periods</h1>
+       <img class="irregular-time-img" src="./Images/period 1.png" alt="">
+    </section>
+    <section class="place-center column pcos-if-section" style="display: none;">
+       <h1>Are you suffering from PCOS or PCOD?</h1>
+       <div class="pcos-option-container">
+        <button value="yes" class="btn btn-option">Yes</button>
+        <button value="no" class="btn btn-option">Nope</button>
+        <button value="not sure" class="btn btn-option">Not Sure</button>
+       </div>
+       <img src="./Images/menstrual-cycle 1.png" alt="">
+    </section>
+    <section class="place-center column bleeding-section" style="display: none;">
+       <h1>How heavy is your bleeding during your period, Name?</h1>
+       <div class="selection-container">
+        <div class="option-container">
+
+            <div class="bleeding-option place-center column">
+                <h2>Light</h2>
+                <div value="light" class="btn btn-bleeding"></div>
+                <img class="bleeding-levels" src="./Images/blood 1.png" alt="">
+            </div>
+            <div class="line"></div>
+            <div class="bleeding-option place-center column">
+                <h2>Normal</h2>
+                <div value="normal" class="btn btn-bleeding"></div>
+                 <img class="bleeding-levels" src="./Images/blood 2.png" alt="">
+            </div>
+           <div class="line"></div>
+           <div class="bleeding-option place-center column">
+            <h2>Heavy</h2>
+            <div value="heavy" class="btn btn-bleeding"></div>
+            <img class="bleeding-levels" src="./Images/blood 3.png" alt="">
+           </div>
+           <div class="line"></div>
+           <div class="bleeding-option place-center column">
+               <h2>Clots of blood</h2>
+               <div value="clots" class="btn btn-bleeding"></div>
+               <img class="bleeding-levels" src="./Images/thrombosis 1.png" alt="">
+            </div>
+        </div>
+        <img class="pad-img" src="./Images/pad-def.png" alt="">
+       </div>
+       <button class="btn btn-next">Next</button>
+    </section>
+    <section class="place-center column weight-section" style="display: none;">
+    <h1>Are you struugling to maintain you weight?</h1>
+    <div class="weight-options">
+        <div class="weight-option place-center">
+            <p>Underweight</p>
+        </div>
+        <div class="weight-option place-center">
+            <p>Healthy</p>
+        </div>
+        <div class="weight-option place-center">
+            <p>Overweight</p>
+        </div>
+    </div>
+    <div class="meter-container">
+        <div class="meter">
+            <div class="container1"></div>
+            <div class="container2"></div>
+        </div>
+    </div>
+    <button class="btn btn-weight">Next</button>
+    </section>
+    <section class="place-center column appointment-section" style="display: none;">
+        <h1>Hey Palak</h1>
+        <div class="appointment-container">
+            <img src="./Images/doctor 1.png" alt="">
+            <h2>Book an appointment right away with Dr. Priya Chaterjee</h2>
+            <button class="btn-appointment"><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/paraskumar2410/30min'});return false;"> Book an Appointment</a>
+                <!-- Calendly link widget end --></button>
+        </div>
+    </section>
+    <section class="place-center" style="display: none;">
+        <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/paraskumar2410/30min" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+    </section>
+
+    <script>
+        
+        
+        
+        let  userPrefferedLanguage = '';
+        let  username = '';
+        let  pcosStatus = '';
+        let  bleedingLevel = '';
+        let langSelButtons = document.querySelectorAll('.language-option');
+        const nameInput = document.querySelector('.name-input');
+        const nameBtn = document.querySelector('.btn-name');
+        const pcosOptions = document.querySelectorAll('.pcos-option-container .btn-option');
+        const bleedingOption = document.querySelectorAll('.bleeding-option');
+        const bleedingOptions = document.querySelectorAll('.btn-bleeding');
+        const bleedingLevels = document.querySelectorAll('.bleeding-levels');
+        const nextBtn = document.querySelector('.btn-next');
+        const btnWeight = document.querySelector('.btn-weight');
+        const bookAppointmentBtn = document.querySelector('.btn-appointment');
+
+        console.log(bleedingOption);
+
+        
+        btnWeight.onclick = () =>{
+            switchStage(8)
+        }
+
+
+        
+        nextBtn.onclick = () => {
+            switchStage(7)
+        }
+
+
+        let selected = "";
+        bleedingOptions.forEach((btn,index)=>{
+            selected === "" && btn.addEventListener('mouseover',(btn)=>{
+                bleedingLevels.forEach((e,i)=>{
+                    console.log(index);
+                    i==index? e.style.opacity = `1` : e.style.opacity = `0`;
+                    
+                })
+            })
+            btn.addEventListener('mouseout',()=>{
+                bleedingLevels.forEach((e,i)=>{e.style.opacity = `0`;})
+            })
+            btn.onclick = ()=>{
+                bleedingOption.forEach((e,i)=>{
+                    index === i ? e.classList.add('selected') : e.classList.remove('selected');
+                    selected = '123';
+                    let padImg = document.querySelector('.pad-img');
+                    padImg.setAttribute("src",`./Images/pad${index+1}.png`)
+                })
+                nextBtn.style.display = `block`;
+            }
+        })
+
+
+        pcosOptions.forEach((btn)=>{
+            btn.onclick = ()=>{
+                pcosStatus = btn.value;
+                switchStage(6)
+            }
+        })
+
+
+
+        nameBtn.onclick = (e)=>{
+           username = nameInput.value;
+           switchStage(3)
+           setTimeout(()=>{ 
+            switchStage(4);
+            setTimeout(()=>{
+                 switchStage(5);
+            },2000)
+        },1000)
+        }
+
+
+        setInterval(()=>{
+            nameInput && nameInput.value ? nameBtn.style.display = `block` : nameBtn.style.display = `none`;
+        },500)
+
+        function switchStage(n){
+            let sections = document.querySelectorAll('section');
+            sections.forEach((e,i)=>{
+                if(i!==n-1){
+                    console.log();
+                    e.style.display = `none`;
+                }else{
+                    e.style.display = `flex`;
+                    console.log(e);
+                }
+            })
+        }
+
+        function setUserLang(l){
+            userPrefferedLanguage = l;
+        }
+ 
+        langSelButtons.forEach((e)=>{
+            e.onclick = (lang) =>{
+                setUserLang(lang.target.value);
+                console.log(userPrefferedLanguage);
+                switchStage(2);
+            } 
+        })
+    </script>
+</body>
+</html>
